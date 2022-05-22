@@ -1,0 +1,49 @@
+html {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  body{
+    padding: 0;
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+  .container {
+    max-width: 960px;
+  }
+  
+  .pricing-header {
+    max-width: 700px;
+  }
+  
+  .card-deck .card {
+    min-width: 220px;
+  }
+
+  
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+  .tag-name{
+      display: inline-block;
+      margin-bottom: 30px;
+      
+  }
+  .center-tag{
+      text-align: center;
+      margin-top: 20px;
+  }
+  .li-tag-muon{
+      line-height: 1.8;
+      margin-bottom: 3px;
+  }
+  .title-name{
+    color: #aa2ee6;
+  }

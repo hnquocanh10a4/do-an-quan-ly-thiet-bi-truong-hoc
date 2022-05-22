@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Quản lý thiết bị</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/manages.css">
+  <script src="https://kit.fontawesome.com/0c2db3ef80.js" crossorigin="anonymous"></script>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <p class="navbar-brand">PTIT</p>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- 6 -->
+          <li id="home"><a href="/home"><i class="fas fa-home"></i>Trang chủ</a></li>
+          <li id="about"><a href="/borrow"><i class="fas fa-archive"></i>Mượn</a></li>
+          <li id="contact"><a href="/manage"><i class="fas fa-user-cog"></i>Quản Lý</a></li>
+          <li id="contact"><a href="/manageLoanOnline"><i class="far fa-calendar-check"></i> Duyệt mượn</a></li>
+          <li id="log-out"><a href="/logOut"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+        </ul>
+          
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+
+    <main role="main">
+      <div class="manage"> 
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Quản lý thiết bị trường học</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <h1 class="titleDay">Hôm nay:</h1>
+            <% loanManage.forEach(function(item){  %> 
+            <div class="col-md-4">
+            <h2><%=  item.MSSV  %></h2>
+            <p>Họ và tên : <%=  item.studentName  %></p>
+            <p>Tên phòng : <%=  item.roomName  %></p>
+            <p>Số điện thoại:  <%=  item.phone  %></p>
+            <p><a class="btn btn-info" href="/manage/<%=  item.MSSV  %>" role="button"><i class="far fa-sticky-note"></i> Chi tiết </a></p>
+            <p><a class="btn btn-primary pricing" href="/pricing/<%=  item.MSSV  %>" role="button"><i class="fas fa-money-check-alt"></i> Mất mát </a></p>
+          </div>
+          <% }); %> 
+        </div>
+
+        <hr>
+        <div class="row">
+          <h1 class="titleDay">Chưa trả, hết hạn:</h1>
+          <% loanManage1.forEach(function(item){  %> 
+          <div class="col-md-4 ">
+          <h2 class="expiration"><%=  item.MSSV  %></h2>
+          <p class="name-out-of-date">Họ và tên : <%=  item.studentName  %></p>
+          <p>Tên phòng : <%=  item.roomName  %></p>
+          <p>Số điện thoại:  <%=  item.phone  %></p>
+          <p><a class="btn btn-danger" href="/manage/<%=  item.MSSV  %>" role="button"><i class="far fa-sticky-note"></i> Chi tiết </a></p>
+          <p><a class="btn btn-primary pricing" href="/pricing/<%=  item.MSSV  %>" role="button"><i class="fas fa-money-check-alt"></i> Mất mát </a></p>
+        </div>
+        <% }); %> 
+      </div>
+        
+      </div>
+
+      </div> <!-- /container -->
+    </div>
+    </main>
+
+    <footer class="container">
+      <p>&copy; PTIT</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

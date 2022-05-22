@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cho mượn</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/manageStaffAdmin.css">
+<link rel="stylesheet" href="/css/borrow.css">
+  <script src="https://kit.fontawesome.com/0c2db3ef80.js" crossorigin="anonymous"></script>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <p class="navbar-brand">PTIT</p>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- 6 -->
+          <li id="home"><a href="/home"><i class="fas fa-home"></i>Trang chủ</a></li>
+          <li id="about"><a href="/borrow"><i class="fas fa-archive"></i>Mượn</a></li>
+          <li id="contact"><a href="/manage"><i class="fas fa-user-cog"></i>Quản Lý</a></li>
+          <li id="contact"><a href="/manageLoanOnline"><i class="far fa-calendar-check"></i> Duyệt mượn</a></li>
+          <li id="log-out"><a href="/logOut"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+        </ul>
+          
+    </div>
+  </nav>
+
+  <body>
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="manage">
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-3">Duyệt mượn online </h1>
+          </div>
+        </div>
+  
+        <div class="container">
+          <!-- Example row of columns -->
+          <div class="row">
+            <% loanOn.forEach(function(item){  %>
+              <div class="col-md-4 boder-div border border-primary">
+                <h4>Email : <%= item.email %> </h4>
+                <p>Mã số sinh viên : <%= item.borrowOn.MSSV %> </p>
+                <p>Tên sinh viên : <%= item.borrowOn.studentName %> </p>
+                <p>Số điện thoại : <%= item.borrowOn.phone %> </p>
+                <p>Phòng : <%= item.borrowOn.roomName %> </p>
+                <p>Ngày mượn : <%= item.borrowOn.day %> </p>
+                <% item.borrowOn.equipmentList.forEach(element => {  %>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Vật dụng mượn</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><%=  element.name  %>  <p class="setSL">SL: <%=  element.count  %></p> </p>
+                           
+                        </div>
+                    </div>
+                    <% }); %>
+                <p>Lưu ý : <%= item.note %> </p>
+                <form action="manageLoanOnline/<%= item._id %> ">
+                <button type="submit" class="btn btn-primary">Duyệt</button>
+                </form>
+            </div>
+            <% }); %> 
+          </div>
+  
+          <hr>
+  
+        </div> <!-- /container -->
+      </div>  
+      </main>
+
+<%- include("footer") -%>

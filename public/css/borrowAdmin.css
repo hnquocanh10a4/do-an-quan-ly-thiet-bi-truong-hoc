@@ -1,0 +1,65 @@
+body{
+    padding: 0;
+    
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+}
+.container{
+    padding: 3%;
+}
+.img-sing-up{
+    height: 70vh;
+    
+}
+.form-control
+{
+    margin:  0;
+}
+.SL{
+    width: 70px;
+    height: 20px;
+}
+.for{
+    display: inline-block;
+}
+.equiForm
+{
+    display: inline-block;
+    margin: 15px;
+}
+.addBTN
+{
+    position: relative;
+    left: 80px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+}
+.centure{
+    text-align: center;
+}
+
+.jumbotron{
+    margin:0 7%;
+}
+
+
+.labelDK{
+    text-align: center;
+    color: #aa2ee6;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 50px;
+}
+.borrow
+{
+    margin: 100px 150px;
+    background-color: #f0f5f9;
+    padding: 0;
+    border-radius: 3%;
+}
+.err{
+    color: red;
+}
+.magin-top-user{
+    margin-top: 15px;
+}

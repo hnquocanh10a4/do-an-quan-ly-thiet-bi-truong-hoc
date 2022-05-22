@@ -1,0 +1,28 @@
+<%- include("header") -%>
+
+        
+    <div class="resultTab ">
+            <div class="centure ">
+             
+                <h3>Mã số sinh viên</h3>
+                <p><%=  loanManage.MSSV  %></p>
+                <h3>Họ và tên</h3>
+                <p><%=  loanManage.studentName  %></p>
+                <h3>Tên phòng</h3>
+                <p><%=  loanManage.roomName  %></p>
+                <h3>Số điện thoại</h3>
+                <p><%=  loanManage.phone  %></p>
+                <% loanManage.equipmentList.forEach(element => {  %>
+                    <h3>Vật dụng mượn</h3>
+                    <p><%=  element.name  %></p> 
+                    
+                    <% }); %> 
+                <h3>Lưu ý</h3>
+                <p><%=  loanManage.note  %></p>
+            
+                <hr size="10px" > 
+            </div>
+        </div>
+  
+
+    <%- include("footer") -%>

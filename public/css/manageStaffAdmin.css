@@ -1,0 +1,69 @@
+body{
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    
+}
+.manage{
+    margin: 3%;
+    background-color: #f0f5f9;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 3%;
+}
+.jumbotron{
+    margin: 3%;
+    border-radius: 50%;
+    background-color: #aa96da;
+    
+}
+.display-3{
+    text-align: center;
+    color: seashell;
+}
+.pricing{
+    position: absolute;
+    bottom: 16px;
+    left: 120px;
+}
+.expiration
+{
+    
+    color: red;
+}
+.titleDay{
+    color:#aa2ee6;
+    text-align: center;
+}
+.item-name
+{
+    color:#aa2ee6;
+}
+.one-line-btn{
+    position: relative;
+    bottom: 62px;
+    left: 73px;
+  }
+.errTag{
+    background-color: #f5c0c0;
+    color: #ff0000;
+    text-align: center;
+    
+    padding: 10px;
+    margin: 10px 0 30px;
+    border-radius: 20%;
+}
+.errMess{
+    font-size: 30px;
+}
+.his-btn{
+    width: 150px;
+}
+.boder-div{
+    border-color: darkblue;
+    
+}
+.center-h2{
+    text-align: center;
+    color:#aa2ee6;
+}
+.img-arrow{
+    height: 70vh;
+}
